@@ -7,19 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		675C05ED24C1309F00BE3078 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675C05EC24C1309F00BE3078 /* User.swift */; };
+		675C05F024C131CD00BE3078 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675C05EF24C131CD00BE3078 /* Post.swift */; };
+		675C05F224C131F200BE3078 /* InstaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675C05F124C131F200BE3078 /* InstaService.swift */; };
+		675C05F424C1330500BE3078 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675C05F324C1330500BE3078 /* Helper.swift */; };
+		675C05F824C1350B00BE3078 /* PreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675C05F724C1350B00BE3078 /* PreviewVC.swift */; };
+		675C05FA24C1578D00BE3078 /* InstaSave Wiregram.png in Resources */ = {isa = PBXBuildFile; fileRef = 675C05F924C1578D00BE3078 /* InstaSave Wiregram.png */; };
 		67AEA16724B7FADE002D9682 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AEA16624B7FADE002D9682 /* AppDelegate.swift */; };
 		67AEA16924B7FADE002D9682 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AEA16824B7FADE002D9682 /* SceneDelegate.swift */; };
-		67AEA16B24B7FADE002D9682 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AEA16A24B7FADE002D9682 /* ViewController.swift */; };
+		67AEA16B24B7FADE002D9682 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AEA16A24B7FADE002D9682 /* HomepageViewController.swift */; };
 		67AEA16E24B7FADE002D9682 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67AEA16C24B7FADE002D9682 /* Main.storyboard */; };
 		67AEA17024B7FAE1002D9682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67AEA16F24B7FAE1002D9682 /* Assets.xcassets */; };
 		67AEA17324B7FAE1002D9682 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67AEA17124B7FAE1002D9682 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		675C05EC24C1309F00BE3078 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		675C05EF24C131CD00BE3078 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		675C05F124C131F200BE3078 /* InstaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaService.swift; sourceTree = "<group>"; };
+		675C05F324C1330500BE3078 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		675C05F724C1350B00BE3078 /* PreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVC.swift; sourceTree = "<group>"; };
+		675C05F924C1578D00BE3078 /* InstaSave Wiregram.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "InstaSave Wiregram.png"; sourceTree = "<group>"; };
 		67AEA16324B7FADE002D9682 /* InstaSave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaSave.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67AEA16624B7FADE002D9682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67AEA16824B7FADE002D9682 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		67AEA16A24B7FADE002D9682 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		67AEA16A24B7FADE002D9682 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		67AEA16D24B7FADE002D9682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67AEA16F24B7FAE1002D9682 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67AEA17224B7FAE1002D9682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +49,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		675C05EE24C130A600BE3078 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				675C05EC24C1309F00BE3078 /* User.swift */,
+				675C05EF24C131CD00BE3078 /* Post.swift */,
+				675C05F124C131F200BE3078 /* InstaService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		675C05F524C1331500BE3078 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				675C05F324C1330500BE3078 /* Helper.swift */,
+				675C05F924C1578D00BE3078 /* InstaSave Wiregram.png */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		675C05F624C1348000BE3078 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				67AEA16A24B7FADE002D9682 /* HomepageViewController.swift */,
+				675C05F724C1350B00BE3078 /* PreviewVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		67AEA15A24B7FADE002D9682 = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +98,13 @@
 			children = (
 				67AEA16624B7FADE002D9682 /* AppDelegate.swift */,
 				67AEA16824B7FADE002D9682 /* SceneDelegate.swift */,
-				67AEA16A24B7FADE002D9682 /* ViewController.swift */,
+				675C05EE24C130A600BE3078 /* Model */,
+				675C05F624C1348000BE3078 /* Controller */,
 				67AEA16C24B7FADE002D9682 /* Main.storyboard */,
 				67AEA16F24B7FAE1002D9682 /* Assets.xcassets */,
 				67AEA17124B7FAE1002D9682 /* LaunchScreen.storyboard */,
 				67AEA17424B7FAE1002D9682 /* Info.plist */,
+				675C05F524C1331500BE3078 /* Helpers */,
 			);
 			path = InstaSave;
 			sourceTree = "<group>";
@@ -126,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67AEA17324B7FAE1002D9682 /* LaunchScreen.storyboard in Resources */,
+				675C05FA24C1578D00BE3078 /* InstaSave Wiregram.png in Resources */,
 				67AEA17024B7FAE1002D9682 /* Assets.xcassets in Resources */,
 				67AEA16E24B7FADE002D9682 /* Main.storyboard in Resources */,
 			);
@@ -138,9 +181,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67AEA16B24B7FADE002D9682 /* ViewController.swift in Sources */,
+				675C05F424C1330500BE3078 /* Helper.swift in Sources */,
+				675C05ED24C1309F00BE3078 /* User.swift in Sources */,
+				67AEA16B24B7FADE002D9682 /* HomepageViewController.swift in Sources */,
 				67AEA16724B7FADE002D9682 /* AppDelegate.swift in Sources */,
+				675C05F224C131F200BE3078 /* InstaService.swift in Sources */,
+				675C05F824C1350B00BE3078 /* PreviewVC.swift in Sources */,
 				67AEA16924B7FADE002D9682 /* SceneDelegate.swift in Sources */,
+				675C05F024C131CD00BE3078 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

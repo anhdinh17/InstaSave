@@ -1,24 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3jh-8I-ESc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Homepage View Controller-->
+        <scene sceneID="jna-VE-R0B">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="3jh-8I-ESc" customClass="HomepageViewController" customModule="InstaSave" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WEm-Gb-CRQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_8428" translatesAutoresizingMaskIntoConstraints="NO" id="LS2-hX-YDF" userLabel="Background Image">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="reF-Gj-MuC">
+                                <rect key="frame" x="0.0" y="131" width="414" height="677"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="121" translatesAutoresizingMaskIntoConstraints="NO" id="FhE-no-H2d">
+                                <rect key="frame" x="20" y="85" width="374" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y85-wL-Tmy">
+                                        <rect key="frame" x="0.0" y="0.0" width="157" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Hqx-Iy-49I"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Paste">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pasteButton:" destination="3jh-8I-ESc" eventType="touchUpInside" id="MI5-zz-bK7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHm-cL-OM5">
+                                        <rect key="frame" x="278" y="0.0" width="96" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0c6-7Q-r1K"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Instagram">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="instaButton:" destination="3jh-8I-ESc" eventType="touchUpInside" id="A9B-rU-3FP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeJ-HV-OLE">
+                                <rect key="frame" x="183.5" y="822" width="47" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="3jh-8I-ESc" eventType="touchUpInside" id="hLk-r5-ywF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FhE-no-H2d" firstAttribute="top" secondItem="Abk-Uu-Mci" secondAttribute="top" constant="41" id="5GC-Zv-m7f"/>
+                            <constraint firstItem="BeJ-HV-OLE" firstAttribute="top" secondItem="reF-Gj-MuC" secondAttribute="bottom" constant="14" id="HP9-pv-G7Z"/>
+                            <constraint firstItem="LS2-hX-YDF" firstAttribute="trailing" secondItem="WEm-Gb-CRQ" secondAttribute="trailing" id="KDb-mn-6L1"/>
+                            <constraint firstAttribute="bottom" secondItem="reF-Gj-MuC" secondAttribute="bottom" constant="88" id="NZ7-1p-yFn"/>
+                            <constraint firstItem="reF-Gj-MuC" firstAttribute="top" secondItem="WEm-Gb-CRQ" secondAttribute="top" constant="131" id="QD4-uW-wYe"/>
+                            <constraint firstAttribute="trailing" secondItem="reF-Gj-MuC" secondAttribute="trailing" id="Qt7-XN-DPz"/>
+                            <constraint firstItem="BeJ-HV-OLE" firstAttribute="centerX" secondItem="WEm-Gb-CRQ" secondAttribute="centerX" id="Rwl-sw-1fH"/>
+                            <constraint firstItem="LS2-hX-YDF" firstAttribute="top" secondItem="WEm-Gb-CRQ" secondAttribute="top" id="WfL-aM-CfM"/>
+                            <constraint firstAttribute="trailing" secondItem="FhE-no-H2d" secondAttribute="trailing" constant="20" id="eVC-MJ-W72"/>
+                            <constraint firstItem="reF-Gj-MuC" firstAttribute="leading" secondItem="WEm-Gb-CRQ" secondAttribute="leading" id="f1A-2l-MUq"/>
+                            <constraint firstItem="LS2-hX-YDF" firstAttribute="leading" secondItem="WEm-Gb-CRQ" secondAttribute="leading" id="f45-Sf-Bkr"/>
+                            <constraint firstAttribute="bottom" secondItem="LS2-hX-YDF" secondAttribute="bottom" id="n01-Yg-pLE"/>
+                            <constraint firstItem="FhE-no-H2d" firstAttribute="centerX" secondItem="WEm-Gb-CRQ" secondAttribute="centerX" id="qJD-Aj-xy5"/>
+                            <constraint firstItem="FhE-no-H2d" firstAttribute="leading" secondItem="WEm-Gb-CRQ" secondAttribute="leading" constant="20" id="rfT-lV-IXq"/>
+                            <constraint firstItem="reF-Gj-MuC" firstAttribute="top" secondItem="FhE-no-H2d" secondAttribute="bottom" constant="10" id="y55-I0-B60"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Abk-Uu-Mci"/>
                     </view>
+                    <navigationItem key="navigationItem" id="y60-Y9-6E4"/>
+                    <connections>
+                        <outlet property="instagramButtonOutlet" destination="RHm-cL-OM5" id="1fc-Q1-ck0"/>
+                        <outlet property="pasteButtonOutlet" destination="y85-wL-Tmy" id="P2C-Yf-Ven"/>
+                        <outlet property="photoFromLink" destination="reF-Gj-MuC" id="7Y6-VW-yFc"/>
+                        <outlet property="saveButtonOutlet" destination="BeJ-HV-OLE" id="7ue-GY-Pjc"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05u-Lh-4zO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-339.13043478260875" y="148.66071428571428"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="IMG_8428" width="946" height="2048"/>
+    </resources>
 </document>
