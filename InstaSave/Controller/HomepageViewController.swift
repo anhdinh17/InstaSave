@@ -14,7 +14,7 @@ class HomepageViewController:UIViewController{
     @IBOutlet weak var instagramButtonOutlet: UIButton!
     @IBOutlet weak var saveButtonOutlet: UIButton!
     
-    //    var imageUrl = URL()
+    
     var urlToString: String = ""
     
     var imageFromData = UIImage()
@@ -46,19 +46,14 @@ class HomepageViewController:UIViewController{
                }
     }
     
-    //MARK: - Test Button
+    //MARK: - Paste Button
     @IBAction func pasteButton(_ sender: UIButton) {
         if let link = UIPasteboard.general.string { // link from clipboard
             checkLink(link)
         }
         
     }
-    
-    //    private func showMediaPost(_ post: Post) {
-    //        let previewVC = post.isVideo
-    //        present(previewVC, animated: true)
-    //    }
-    
+
     //MARK: - Save Photos
     @IBAction func saveButtonPressed(_ sender: UIButton) {
            UIImageWriteToSavedPhotosAlbum(imageFromData, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
@@ -70,17 +65,19 @@ class HomepageViewController:UIViewController{
             return
         }
         
-        //  changeButtonTitle()
+       // get data from link
         InstaService.getMediaPost(with: activeLink) { post in
-            //self.setInitialButtonTitle()
+            
+            // post is an object of Post
             guard let post = post else {
                 self.showConnectionErrorMessage()
                 return
             }
             
+            // imageFromData is UIImage
             self.imageFromData = post.image!
             print("Image from post.image: \(self.imageFromData)")
-            print(post.imageUrl)
+            print(post.imageUrl) // imageURL is the URL of the image, it's from Post
             
             self.urlToString = post.imageUrl.absoluteString
             
@@ -88,7 +85,7 @@ class HomepageViewController:UIViewController{
             
             self.setImage(from: self.urlToString)
             
-            //self.showMediaPost(post)
+            
         }
     }
     
@@ -112,6 +109,7 @@ class HomepageViewController:UIViewController{
     
     
     //MARK: - setImage Function
+    // this func is to networking the image we need and set the image on screen
     func setImage(from url: String) {
         guard let imageURL = URL(string: url) else { return }
         
@@ -120,7 +118,7 @@ class HomepageViewController:UIViewController{
             guard let imageData = try? Data(contentsOf: imageURL) else { return }
             
             let image = UIImage(data: imageData)
-            self.imageFromData = image! // thêm vào để lấy UIImage
+            self.imageFromData = image! // put in here to get UIImage
             DispatchQueue.main.async {
                 self.photoFromLink.image = image
             }
@@ -145,42 +143,4 @@ class HomepageViewController:UIViewController{
 }
 
 
-/*
- // FUNC TO NETWORKING imageUrl
- func imageURL (){
- // get image from imageURL
- let catPictureURL = URL(string: "https://image.blockbusterbd.net/00416_main_image_04072019225805.png")!
- 
- // Creating a session object with the default configuration.
- // You can read more about it here https://developer.apple.com/reference/foundation/urlsessionconfiguration
- let session = URLSession(configuration: .default)
- 
- // Define a download task. The download task will download the contents of the URL as a Data object and then you can do what you wish with that data.
- let downloadPicTask = session.dataTask(with: catPictureURL) { (data, response, error) in
- // The download has finished.
- if let e = error {
- print("Error downloading cat picture: \(e)")
- } else {
- // No errors found.
- // It would be weird if we didn't have a response, so check for that too.
- if let res = response as? HTTPURLResponse {
- print("Downloaded cat picture with response code \(res.statusCode)")
- if let imageData = data {
- // Finally convert that Data into an image and do what you wish with it.
- DispatchQueue.main.async {
- self.imageFromDataURL = UIImage(data: imageData,scale: 2.0)!
- print("This is image from URL: \(self.imageFromDataURL)")
- }
- 
- // Do something with your image.
- } else {
- print("Couldn't get image: Image is nil")
- }
- } else {
- print("Couldn't get response code for some reason")
- }
- }
- }
- downloadPicTask.resume()
- }
- */
+

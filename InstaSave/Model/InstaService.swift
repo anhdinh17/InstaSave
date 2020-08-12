@@ -84,7 +84,7 @@ final class InstaService {
                 
                 let post = Post(user: user, imageUrl: imageUrl, videoUrl: videoUrl)
                 post.image = image
-                // Thêm vào:
+                // Print:
                 print(post.image)
                 completion(post)
             }
